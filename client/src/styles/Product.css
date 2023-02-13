@@ -1,0 +1,15 @@
+.product {
+    border: 2px solid black;
+    width: 14em;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr, 0.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.product__img {
+    margin: auto;
+    width: 10em;
+}
