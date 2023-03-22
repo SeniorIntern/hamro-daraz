@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { categorySchema } = require('../models/category');
 
 // model
 const ProductModel = mongoose.model(
@@ -8,12 +9,18 @@ const ProductModel = mongoose.model(
       type: String,
       require: true,
       minlength: 3,
-      maxlength: 24,
+      maxlength: 164,
+    },
+    category: {
+      type: categorySchema,
+      required: true,
     },
     price: {
-      type: String,
-      require: true,
-      min: 200,
+      type: Number,
+      required: true,
+      min: 10,
     },
   })
 );
+
+exports.ProductModel = ProductModel;
